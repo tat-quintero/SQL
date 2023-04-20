@@ -1,0 +1,28 @@
+--create a table and name it bns
+CREATE TABLE bns (id INTEGER PRIMARY KEY, name TEXT, author TEXT, paperbook TEXT, price INTEGER);
+
+-insert values into the table
+INSERT INTO bns VALUES (1, "Twilight", "Stephanie Meyer", "Y", 15.99);
+INSERT INTO bns VALUES (2, "Midnight Sun", "Stephanie Meyer", "N", 22.99);
+INSERT INTO bns VALUES (3, "Bible", "God", "N", 56.99);
+INSERT INTO bns VALUES (4, "I Love Me More", "Jenna Banks", "N", 22.99);
+INSERT INTO bns VALUES (5, "Personality Types", "Riso", "N", 32.99);
+INSERT INTO bns VALUES (6, "Howl's Moving Castle", "Diana Wynnie Jones", "Y", 12.99);
+INSERT INTO bns VALUES (7, "Python", "Swiegart", "Y", 17.99);
+INSERT INTO bns VALUES (8, "Glute Lab", "Bret Contreas", "N", 45.99);
+INSERT INTO bns VALUES (9, "The Geisha Secret", "Hanako", "Y", 9.99);
+INSERT INTO bns VALUES (10, "8 Rules of Love", "Jay Shetty", "N", 28.99);
+INSERT INTO bns VALUES (11, "All That You Deserve", "Jacqueline Whitney", "N", 14.99);
+INSERT INTO bns VALUES (12, "Old Testament", "God", "Y", 34.99);
+INSERT INTO bns VALUES (13, "New Testament", "God", "N", 49.99);
+INSERT INTO bns VALUES (14, "Apocrypha", "Apostles", "Y", 19.99);
+INSERT INTO bns VALUES (15, "Green Eggs and Ham", "Dr. Seuss", "N", 5.99);
+
+-select all information from the table bns
+SELECT * FROM bns;
+
+-order the selected information from the table
+SELECT * FROM bns ORDER BY price;
+
+--total up the sum of the prices of the items in the table
+SELECT SUM(price) FROM bns;
