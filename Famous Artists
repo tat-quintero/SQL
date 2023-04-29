@@ -1,0 +1,44 @@
+CREATE TABLE artists (id INTEGER PRIMARY KEY, artist TEXT, hometown TEXT, genre TEXT);
+
+INSERT INTO artists VALUES (1, "Britney Spears", "Mississippi", "Pop");
+INSERT INTO artists VALUES (2, "Bon Jovi", "New Jersey", "Rock");
+INSERT INTO artists VALUES (3, "Kenny Chesney", "Tennessee", "Country");
+INSERT INTO artists VALUES (4, "Def Leppard", "South Yorkshire", "Rock");
+INSERT INTO artists VALUES (5, "Bob Dylan", "Minnesota", "Country");
+INSERT INTO artists VALUES (6, "Tupac Shakur", "New York", "Rap");
+INSERT INTO artists VALUES (7, "Baxkstreet Boys", "Florida", "Pop");
+INSERT INTO artists VALUES (8, "Tim McGraw", "Louisiana", "Country");
+INSERT INTO artists VALUES (9, "Rod Stewart", "England", "Rock");
+INSERT INTO artists VALUES (10, "Queen", "England", "Rock");
+INSERT INTO artists VALUES (11, "Journey", "California", "Rock");
+INSERT INTO artists VALUES (12, "Taylor Swift", "Pennsylvania", "Pop");
+INSERT INTO artists VALUES (13, "Celine Dion", "Quebec", "Pop");
+INSERT INTO artists VALUES (14, "Fleetwood Mac", "England", "Country");
+INSERT INTO artists VALUES (15, "Whitney Houston", "New Jersey", "Pop");
+INSERT INTO artists VALUES (16, "Madonna", "Michigan", "Pop");
+INSERT INTO artists VALUES (17, "Bruce Springsteen", "New Jersey", "Rock");
+
+CREATE TABLE famous_for (id INTEGER PRIMARY KEY, name TEXT, album TEXT, album_year REAL);
+
+INSERT INTO famous_for VALUES (1, "Toxic", "In The Zone", 2003);
+INSERT INTO famous_for VALUES (2, "Livin On A Prayer", "Slippery When Wet", 1986);
+INSERT INTO famous_for VALUES (3, "American Kids", "The Big Revival", 2014);
+INSERT INTO famous_for VALUES (4, "Pour Some Sugar On Me", "Hysteria", 1987);
+INSERT INTO famous_for VALUES (5, "Knockin' On Heaven's Door", "Pat Garrett & Billy The Kid", 1973);
+INSERT INTO famous_for VALUES (6, "Hit Em Up", "Greatest Hits", 1998);
+INSERT INTO famous_for VALUES (7, "I Want It That Way", "Millennium", 1999);
+INSERT INTO famous_for VALUES (8, "Something Like That", "A Place In The Sun", 1999);
+INSERT INTO famous_for VALUES (9, "Da Ya Think I'm Sexy?", "Blondes Have More Fun", 1978);
+INSERT INTO famous_for VALUES (10, "Bohemian Rhapsody", "A Night At The Opera", 1975);
+INSERT INTO famous_for VALUES (11, "Don't Stop Believin'", "Escape", 1981);
+INSERT INTO famous_for VALUES (12, "Anti-Hero", "Midnights", 2022);
+INSERT INTO famous_for VALUES (13, "My Heart Will Go On", "Let's Talk About Love", 1997);
+INSERT INTO famous_for VALUES (14, "Dreams", "Rumors (Super Deluxe)", 1977);
+INSERT INTO famous_for VALUES (15, "I Wanna Dance With Somebody (Who Loves Me)", "Whitney", 1987);
+INSERT INTO famous_for VALUES (16, "Material Girl", "Celebration (Double Disc Version)", 2009);
+INSERT INTO famous_for VALUES (17, "Dancing In The Dark", "Born In The U.S.A.", 1984);
+    
+
+SELECT DISTINCT artists.artist, artists.genre, famous_for.name, famous_for.album FROM artists
+    JOIN famous_for
+    ON artists.id = famous_for.id
