@@ -27,7 +27,8 @@
     
     #5 What is the total revenue for each product sold in January? (Revenue can be calculated using the number of products sold and the price of the products).
     
-    
+    SELECT DISTINCT Product, SUM(Quantity)*price AS Revenue FROM JanSales
+        GROUP BY Product
     
     #6 Which products were sold in February at 548 Lincoln St, Seattle, WA 98101, how many of each were sold, and what was the total revenue?
     
