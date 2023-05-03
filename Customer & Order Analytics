@@ -37,5 +37,10 @@
     
     #7 How many customers ordered more than 2 products at a time in February, and what was the average amount spent for those customers? 
     
-    
+    SELECT COUNT(customers.acctnum), AVG(quantity*price) AS avg_price FROM customers
+        JOIN FebSales
+            ON customers.order_id = FebSales.orderID
+    WHERE quantity > 2
+        AND length(orderID) = 6
+        AND orderID <> "Order ID"
     
