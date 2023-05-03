@@ -32,7 +32,8 @@
     
     #6 Which products were sold in February at 548 Lincoln St, Seattle, WA 98101, how many of each were sold, and what was the total revenue?
     
-    
+    SELECT Product, location, SUM(quantity)*price AS Revenue FROM FebSales
+    WHERE location = "548 Lincoln St, Seattle, WA 98101"
     
     #7 How many customers ordered more than 2 products at a time in February, and what was the average amount spent for those customers? 
     
