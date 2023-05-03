@@ -1,15 +1,15 @@
     #1 How many orders were placed in January? 
     
     SELECT COUNT (orderID) FROM BIT_DB.JanSales
-    WHERE length(orderID) = 6
-        AND orderID <> "Order ID"
+        WHERE length(orderID) = 6
+            AND orderID <> "Order ID"
     
     #2 How many of those orders were for an iPhone?
     
     SELECT COUNT(*) FROM BIT_DB.JanSales 
-    WHERE Product = "iPhone"
-        AND length(orderID) = 6
-        AND orderID <> "Order ID"
+        WHERE Product = "iPhone"
+            AND length(orderID) = 6
+            AND orderID <> "Order ID"
     
     #3 Select the customer account numbers for all the orders that were placed in February.
     
@@ -22,8 +22,8 @@
     #4 Which product was the cheapest one sold in January, and what was the price?
     
     SELECT Product, MIN(price) FROM JanSales
-    WHERE length(orderID) = 6
-        AND orderID <> "Order ID";
+        WHERE length(orderID) = 6
+            AND orderID <> "Order ID";
     
     #5 What is the total revenue for each product sold in January? (Revenue can be calculated using the number of products sold and the price of the products).
     
@@ -33,14 +33,14 @@
     #6 Which products were sold in February at 548 Lincoln St, Seattle, WA 98101, how many of each were sold, and what was the total revenue?
     
     SELECT Product, location, SUM(quantity)*price AS Revenue FROM FebSales
-    WHERE location = "548 Lincoln St, Seattle, WA 98101"
+        WHERE location = "548 Lincoln St, Seattle, WA 98101"
     
     #7 How many customers ordered more than 2 products at a time in February, and what was the average amount spent for those customers? 
     
     SELECT COUNT(customers.acctnum), AVG(quantity*price) AS avg_price FROM customers
         JOIN FebSales
             ON customers.order_id = FebSales.orderID
-    WHERE quantity > 2
-        AND length(orderID) = 6
-        AND orderID <> "Order ID"
+        WHERE quantity > 2
+            AND length(orderID) = 6
+            AND orderID <> "Order ID"
     
