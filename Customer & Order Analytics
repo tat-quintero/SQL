@@ -49,3 +49,30 @@
     SELECT Product, SUM(Quantity) AS total_quantity FROM FebSales
         WHERE location LIKE '%Los Angeles%'
         GROUP BY Product
+
+PART II
+
+    #1 Which locations in New York recieved at least 3 orders in January, and how many orders did they each receive?
+        SELECT location, quantity FROM JanSales
+        WHERE location LIKE '%New York%'
+            GROUP BY location
+            HAVING Quantity >= 3
+            ORDER BY Quantity asc;
+            
+    #2 How many of each type of headphone were sold in February?
+    
+    
+    
+    #3 What was the average amount spent per account in February?
+    
+    
+    
+    #4 What was the average quantity of products purchased per account in February? 
+    
+    
+    
+    #5 Which product brought in the most revenue in January and how much revenue did it bring in total? 
+    
+    
+    
+    
