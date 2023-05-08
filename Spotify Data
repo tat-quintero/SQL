@@ -17,7 +17,6 @@ SELECT track_name, artist_name, MAX(duration_ms) FROM Spotifydata
   ORDER BY MAX(duration_ms) DESC
   LIMIT 1
 
-#4 What's the longest song on each album in the dataset?
 
 
 
