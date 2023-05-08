@@ -12,7 +12,10 @@ SELECT artist_name, popularity FROM Spotifydata
 
 #3 What artist released the longest song?
 
-
+SELECT track_name, artist_name, MAX(duration_ms) FROM Spotifydata
+  GROUP BY artist_name
+  ORDER BY MAX(duration_ms) DESC
+  LIMIT 1
 
 #4 What's the longest song on each album in the dataset?
 
