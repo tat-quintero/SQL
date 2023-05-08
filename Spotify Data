@@ -1,6 +1,8 @@
 #1 What is the average danceability by artist and track? 
 
-
+SELECT DISTINCT artist_name, AVG(danceability) FROM Spotifydata
+  GROUP BY artist_name
+  ORDER BY AVG(danceability) desc;
 
 #2 Who are the top 10 artists based on popularity? 
 
