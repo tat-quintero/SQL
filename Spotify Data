@@ -6,7 +6,9 @@ SELECT DISTINCT artist_name, AVG(danceability) FROM Spotifydata
 
 #2 Who are the top 10 artists based on popularity? 
 
-
+SELECT artist_name, popularity FROM Spotifydata
+ORDER BY popularity desc
+LIMIT 10
 
 #3 What artist released the longest song?
 
