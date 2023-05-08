@@ -65,11 +65,16 @@ PART II
         WHERE Product LIKE '%Headphone%' 
             AND length(orderID) = 6
             AND orderID <> 'Order ID'
-    GROUP BY Product
+        GROUP BY Product
 
 
     #3 What was the average amount spent per account in February?
     
+    SELECT avg(quantity*price) as avg FROM FebSales
+    JOIN customers 
+        ON FebSales.orderID = customers.order_id
+        AND length(orderID) = 6
+        AND orderID <> 'Order ID'
     
     
     #4 What was the average quantity of products purchased per account in February? 
