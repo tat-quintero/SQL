@@ -17,6 +17,10 @@ SELECT track_name, artist_name, MAX(duration_ms) FROM Spotifydata
   ORDER BY MAX(duration_ms) DESC
   LIMIT 1
 
+#4 What tracks had a tempo higher than 124?
 
+SELECT artist_name, track_name, tempo FROM Spotifydata
+  WHERE tempo >= 124
+  ORDER BY tempo desc;
 
 
