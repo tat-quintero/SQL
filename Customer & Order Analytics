@@ -87,6 +87,9 @@ PART II
     
     #5 Which product brought in the most revenue in January and how much revenue did it bring in total? 
     
-    
+    SELECT Product, SUM(Quantity*price) FROM JanSales
+        GROUP BY Product
+        ORDER BY sum(Quantity*price) desc
+        LIMIT 1
     
     
