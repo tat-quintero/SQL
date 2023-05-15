@@ -57,6 +57,11 @@
     
     #10 Write a query that includes the purchased track name AND artist name with each invoice line ID.
     
+    SELECT DISTINCT tracks.Name, invoice_items.invoiceId, artists.Name FROM tracks
+    JOIN invoice_items ON tracks.TrackId = invoice_items.TrackId
+    JOIN artists ON artists.ArtistId = tracks.AlbumId
+    JOIN albums ON albums.ArtistId = artists.ArtistId
+    
     #11 Provide a query that shows all the Tracks, and include the Album name, Media type, and Genre.
     
     #12 Show the total sales made by each sales agent.
