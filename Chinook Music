@@ -42,6 +42,9 @@
     
     #7 How many Invoices were there in 2009?
     
+    SELECT COUNT(InvoiceId) FROM invoices
+    WHERE InvoiceDate LIKE '%2009%'
+    
     #8 What are the total sales for 2009?
     
     #9 Write a query that includes the purchased track name with each invoice line ID.
