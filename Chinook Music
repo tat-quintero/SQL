@@ -64,6 +64,11 @@
 
     #11 Provide a query that shows all the Tracks, and include the Album name, Media type, and Genre.
     
+    SELECT tracks.Name, albums.Title, media_types.Name AS 'Media Type', genres.Name AS Genre FROM tracks
+    JOIN albums ON tracks.AlbumId = albums.AlbumId
+    INNER JOIN media_types ON tracks.MediaTypeId = media_types.MediaTypeId
+    JOIN genres ON tracks.GenreId = genres.GenreId
+
     #12 Show the total sales made by each sales agent.
     
     #13 Which sales agent made the most dollars in sales in 2009? 
