@@ -52,6 +52,9 @@
     
     #9 Write a query that includes the purchased track name with each invoice line ID.
     
+    SELECT tracks.Name, invoice_items.invoiceId FROM tracks
+    JOIN invoice_items ON tracks.TrackId = invoice_items.TrackId
+    
     #10 Write a query that includes the purchased track name AND artist name with each invoice line ID.
     
     #11 Provide a query that shows all the Tracks, and include the Album name, Media type, and Genre.
