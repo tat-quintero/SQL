@@ -47,6 +47,9 @@
     
     #8 What are the total sales for 2009?
     
+    SELECT SUM(Total) FROM invoices
+    WHERE InvoiceDate LIKE '%2009%'
+    
     #9 Write a query that includes the purchased track name with each invoice line ID.
     
     #10 Write a query that includes the purchased track name AND artist name with each invoice line ID.
